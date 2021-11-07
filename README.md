@@ -4,3 +4,5 @@
 **Tasks List**|**Description**|**Status**
 --------------|---------------|---------------
 [Task-00](https://github.com/grvsh02/amfoss-tasks/tree/main/task-00)|Installing Ubuntu|Completed
+[Task-01](https://github.com/grvsh02/amfoss-tasks/tree/main/task-01)|Staring amFOSS repositories|Completed
+[Task-02](https://github.com/grvsh02/amfoss-tasks/tree/main/task-02)|Begin your journey with Linux and Git|Completed
