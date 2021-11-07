@@ -47,6 +47,6 @@ The coordinates are as follows :
 
 On Map the location is actually Amritapuri campus itself 😄
 
-
+![Alt text](https://github.com/grvsh02/amfoss-tasks/blob/main/task-02/Screenshot%20from%202021-10-22%2009-48-13.png)
 
 
