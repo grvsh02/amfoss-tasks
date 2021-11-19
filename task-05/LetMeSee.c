@@ -133,10 +133,7 @@ int main(void)
 
                         tempWord[position] = alphabetInput;     
                         tempWord[length] = '\0';                    
-                        winner = strcmp(tempWord,inputWord);  
-                        printf("%s",tempWord);
-                        printf("%s",inputWord);
-                        printf("%d",winner);
+                        winner = strcmp(tempWord,inputWord);
                 }
             }
 
