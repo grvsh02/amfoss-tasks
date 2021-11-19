@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Chart</title>
+    </head>        
+    <script src="data.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <body>
+        <div class = "chart">
+            <canvas id="myChart"></canvas>
+            <script>
+
+                function fetchdata(){
+                        const data = getRandomJson();
+                        const datapoints = data;
+                        console.log(datapoints);
+                        return datapoints
+                    }
+
+                var pizzas = [];
+                var solds = [];
+                var datapoints = fetchdata();
+                pizzas = datapoints.map(function(obj){
+                        return obj.pizza;
+                    })
+                solds = datapoints.map(function(obj){
+                        return obj.sold;
+                    })
+                    // myChart.config.data.labels[0] = pizzas[0]
+                    // myChart.config.data.labels[1] = pizzas[1]
+                
+                // fetchdata().then(datapoints => {
+                    
+                // })
+
+                    console.log(pizzas)
+
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: pizzas,
+                        datasets: [{
+                            label: 'Pizzza sales',
+                            data: solds,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                            ],
+                            borderWidth: 2
+                            // parsing: false
+                        }]
+                    },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                        },
+                    layout : {
+                        padding: 20
+                    },
+                    animation:{
+                        duration: 3000,
+                        easing: 'easeInOutExpo'
+                    },
+                    responsive: true,
+                    }
+                });
+            //Chart Js Implementation or you can use any other library also [https://www.npmjs.com/search?q=HTML5%20charts]
+            </script>   
+        </div>
+    <!--Visualise the chart based on the data from data.js-->
+    </body>
+    </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/index.js"></script>
+    <title>JS</title>
+  </head>
+  <body>
+
+    <!--On click of Button-1 store something in localStorage-->
+    <button onclick="toggleInput(1)" class="button">Button-1</button>
+    <div class="inputOverlay active" id="input">
+      <div class="input-header">
+        <div class="title" >Input text to store</div>
+        <button onclick="toggleInput(0)" class="close-button">&times;</button>
+      </div>
+      <form id="myForm">
+      <div class="input-body">
+        <input = class="storage" type="text">
+        <p class = "text" ></p>
+        <button class="save" type="button">Save</button>
+      </div>
+    </form>
+    </div> 
+    <!--On click of Button-2 show a popup with current time-->
+    <button onclick="togglepopup(1)" class="button">Button-2</button>
+    <div class="popup active" id="popup">
+      <div class="pop-header">
+        <div class="title">Time</div>
+        <button onclick="togglepopup(0)" class="close-button">&times;</button>
+      </div>
+      <div class="popup-body">
+        <p><span id = "getTime"> </span></p>
+      </div>
+    </div> 
+    <div class = "active" id="overlay"></div>
+    <!--On click of Button-3 change the background-->
+    <button onclick="changeBackgroundColor()" class="button">Button-3</button>
+    <!--On click of Button-4 refresh the page-->
+    <button onClick="window.location.reload();"" class="button">Button-4</button>
+    <!--On click of Button-5 open a new window-->
+    <button onClick="window.open('http://www.google.com');" class="button">Button-5</button>
+    <!--On click of Button-6 spam the console with 'I did it'-->
+    <button onclick="console.log('I did it')" class="button">Button-6</button>
+    <form>
+      <!--set form action-->
+      <a href="/task-08/page-3/chart.html">
+        <button type = "button" class="button">Next</button>
+      </a>
+    </form>
+    <script>
+      var dt = new Date();
+      document.getElementById("getTime").innerHTML = dt.toLocaleTimeString();
+    </script>
+  </body>
+</html>
